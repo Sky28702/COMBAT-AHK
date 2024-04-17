@@ -4,8 +4,8 @@
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 
-Gui, Add, Picture, BackgroundTrans vBackground x0 y0 w218 h100, C:\Users\prate\OneDrive\Desktop\ahk\bg.png
-Gui, Add, DropDownList, vSelector x8 y8 w120, Macro 1|Macro 2|Macro 3|Select Macro||
+Gui, Add, Picture, BackgroundTrans vBackground x0 y0 w218 h100, https://github.com/Sky28702/COMBAT-AHK/blob/main/ahk/bg.png
+Gui, Add, DropDownList, vSelector x8 y8 w120, Infinite Slide|Starfire|More|Select Moves||
 Gui, Add, Button, x131 y7 w80 h23, OK
 Gui, Add, Button, x131 y32 w80 h23, Pause ; Changed the text to "Pause"
 Gui, Add, Button, x131 y57 w80 h23, EXIT
@@ -15,7 +15,7 @@ Gui +AlwaysOnTop
 
 Gui, Show, w218 h100, Mover
 
-SoundPlay, C:\Users\prate\OneDrive\Desktop\ahk\Landscape.mp3
+SoundPlay, https://github.com/Sky28702/COMBAT-AHK/blob/main/ahk/Landscape.mp3
 
 Return
 
@@ -25,25 +25,52 @@ ButtonOK:
 Return
 
 CheckSelected:
-    If (Selector = "Select Macro")
+    If (Selector = "Select Moves")
     {
-        MsgBox, Please select a Macro
+        MsgBox, Please select a move
         Return
     }
-    Else If (Selector = "Macro 1")
+    Else If (Selector = "Infinite Slide")
     {
-        ; your script for Macro 1 here
-        MsgBox, You selected Macro 1
+loop,
+{
+sleep, 250
+send,c
+sleep, 250
+}
+return
     }
-    Else If (Selector = "Macro 2")
+    Else If (Selector = "Starfire")
     {
-        ; your script for Macro 2 here
-        MsgBox, You selected Macro 2
+Loop,
+{
+Send {Shift down}
+sleep, 200
+Send {a down}
+Sleep 200
+Send, {Space}
+Sleep, 200
+Send, {down c}{up c}
+Sleep, 100
+Send, {a up}
+Sleep, 200
+Send {d down}
+sleep 200
+Send, {Space}
+Sleep, 200
+Send, {down c}{up c}
+Sleep,100
+Send, {d up}
+sleep,200
+Send {Shift up}
+}
+
+return
     }
-    Else If (Selector = "Macro 3")
+    Else If (Selector = "More")
     {
         ; your script for Macro 3 here
-        MsgBox, You selected Macro 3
+        MsgBox, If you got default key binds then it will work more updates coming soon. Please don't edit keybinds likes SHIFT A S D C V0.1 thanks
     }
 Return
 
