@@ -4,7 +4,7 @@
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 
-Gui, Add, Picture, BackgroundTrans vBackground x0 y0 w218 h100, https://github.com/Sky28702/COMBAT-AHK/blob/main/ahk/bg.png
+Gui, Add, Picture, BackgroundTrans vBackground x0 y0 w218 h100, https://raw.githubusercontent.com/Sky28702/COMBAT-AHK/main/ahk/bg.png
 Gui, Add, DropDownList, vSelector x8 y8 w120, Infinite Slide|Starfire|More|Select Moves||
 Gui, Add, Button, x131 y7 w80 h23, OK
 Gui, Add, Button, x131 y32 w80 h23, Pause ; Changed the text to "Pause"
@@ -15,7 +15,7 @@ Gui +AlwaysOnTop
 
 Gui, Show, w218 h100, Mover
 
-SoundPlay, https://github.com/Sky28702/COMBAT-AHK/blob/main/ahk/Landscape.mp3
+SoundPlay, https://raw.githubusercontent.com/Sky28702/COMBAT-AHK/main/ahk/Landscape.mp3
 
 Return
 
