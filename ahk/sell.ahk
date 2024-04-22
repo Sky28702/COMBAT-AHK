@@ -70,7 +70,7 @@ return
     Else If (Selector = "More")
     {
         ; your script for Macro 3 here
-        MsgBox, If you got default key binds then it will work more updates coming soon. Please don't edit keybinds likes SHIFT A S D C V0.1 thanks
+        MsgBox, If you got default key binds then it will work more updates coming soon. Please don't edit keybinds likes SHIFT A S D C V0.1 thanks clear your temporary files at regular bases.
     }
 Return
 
